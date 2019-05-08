@@ -76,7 +76,7 @@ class HoverCraft :
                 force = common.local2global(self.angle, self.engineForce[engine])
                 self.acc += force/self.mass
         # 항력: fd = -Cd*v
-        self.acc += - self.Cd * self.vel / self.mass;
+        #self.acc += - self.Cd * self.vel / self.mass;
 
         # 선운동 수치 적분
         self.vel += self.acc * dt
@@ -90,7 +90,7 @@ class HoverCraft :
                                   self.engineForce[engine])
                 self.aAcc += torque[2]/self.I
         # 회전 항력 : td = -Cdr * w
-        self.aAcc += - self.Cdr * self.aVel / self.I;
+        #self.aAcc += - self.Cdr * self.aVel / self.I;
 
         # 회전운동 수치적분
         self.aVel += self.aAcc * dt
